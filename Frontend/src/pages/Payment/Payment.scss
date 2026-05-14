@@ -1,0 +1,140 @@
+.payment-page {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.payment-card {
+  background: #0a0a0a;
+  border: 1px solid #111;
+  border-radius: 16px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 0 30px rgba(0, 224, 255, 0.05);
+
+  &:hover {
+    border-color: #00e0ff;
+    box-shadow: 0 0 40px rgba(0, 224, 255, 0.25);
+    transform: translateY(-5px);
+  }
+
+  .payment-header {
+    margin-bottom: 25px;
+
+    h2 {
+      color: #00e0ff;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+    }
+  }
+
+  /* ================= PRICE BREAKDOWN ================= */
+
+  .price-breakdown {
+    background: #050505;
+    border: 1px solid #111;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #aaa;
+      margin: 8px 0;
+    }
+
+    .total {
+      margin-top: 15px;
+      padding-top: 12px;
+      border-top: 1px solid #111;
+
+      font-size: 28px;
+      font-weight: 700;
+      color: #00e0ff;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        font-size: 14px;
+        color: #aaa;
+        font-weight: 400;
+      }
+    }
+  }
+
+  /* OLD PRICE (optional fallback) */
+  .price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+
+    span {
+      font-size: 16px;
+      color: #aaa;
+      font-weight: 400;
+    }
+  }
+
+  .features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+
+    li {
+      color: #bbb;
+      font-size: 14px;
+      margin: 12px 0;
+      transition: 0.2s;
+    }
+
+    li:hover {
+      color: #00e0ff;
+    }
+  }
+
+  .pay-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #00e0ff;
+    background: transparent;
+    color: #00e0ff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      background: #00e0ff;
+      color: #000;
+      box-shadow: 0 0 25px rgba(0, 224, 255, 0.5);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .secure-text {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+  }
+}

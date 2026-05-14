@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  .main-content {
+    flex: 1;
+  }
+  .global-loader{
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+    180deg,
+    #050b18,
+    #0b1d3a
+    );
+  }
+}

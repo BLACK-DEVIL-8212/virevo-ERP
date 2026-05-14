@@ -1,0 +1,1406 @@
+{
+  "shops": {
+    "shop_1772468112457": {
+      "accounting": {
+        "journals": {
+          "-OnG91yRZ25Zk1xrCpeH": {
+            "createdAt": 1773035598569,
+            "date": 1773035596066,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-112316-6169",
+            "year": 2026
+          },
+          "-OnG92JZeAiq3uVBt-LJ": {
+            "createdAt": 1773035599986,
+            "date": 1773035596066,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-112316-6169",
+            "year": 2026
+          },
+          "-OnGEPj6X_4a6CqkvxGA": {
+            "createdAt": 1773037006510,
+            "date": 1773037003928,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-114643-1171",
+            "year": 2026
+          },
+          "-OnGEQC0voIjrQB3KFLR": {
+            "createdAt": 1773037008421,
+            "date": 1773037003928,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-114643-1171",
+            "year": 2026
+          },
+          "-OnGG4ZjVklOdY6JoEgL": {
+            "createdAt": 1773037443739,
+            "date": 1773037440846,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-115400-1328",
+            "year": 2026
+          },
+          "-OnGG4vT0lUN07b9TmWX": {
+            "createdAt": 1773037445192,
+            "date": 1773037440846,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-115400-1328",
+            "year": 2026
+          },
+          "-OnGHRUbOtsXZKh5sHQy": {
+            "createdAt": 1773037799752,
+            "date": 1773037797227,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-115957-9001",
+            "year": 2026
+          },
+          "-OnGHRpTHnMddQdIVcnQ": {
+            "createdAt": 1773037801150,
+            "date": 1773037797227,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-115957-9001",
+            "year": 2026
+          },
+          "-OnGJp3cpn2f8aBVrMp3": {
+            "createdAt": 1773038424726,
+            "date": 1773038421612,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-121021-1624",
+            "year": 2026
+          },
+          "-OnGJpTzX0cSoF885ID7": {
+            "createdAt": 1773038426411,
+            "date": 1773038421612,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-121021-1624",
+            "year": 2026
+          },
+          "-OnGKtKj1D7-Hw9R4E8G": {
+            "createdAt": 1773038704355,
+            "date": 1773038701388,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-121501-2112",
+            "year": 2026
+          },
+          "-OnGKtfhqzXA-iEI3jnT": {
+            "createdAt": 1773038705790,
+            "date": 1773038701388,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-121501-2112",
+            "year": 2026
+          },
+          "-OnGMVTGdsRPbq_kp38h": {
+            "createdAt": 1773039126871,
+            "date": 1773039122942,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260309-122202-9438",
+            "year": 2026
+          },
+          "-OnGMVoQZNqk-R8CbzLZ": {
+            "createdAt": 1773039128291,
+            "date": 1773039122942,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260309-122202-9438",
+            "year": 2026
+          },
+          "-OnS-QnYIR02FvP4sNAJ": {
+            "createdAt": 1773234404930,
+            "date": 1773234402985,
+            "entries": [
+              {
+                "amount": 14981.9,
+                "costCenter": "",
+                "ledgerId": "bank",
+                "type": "debit"
+              },
+              {
+                "amount": 12999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 1982.9,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260311-183642-2101",
+            "year": 2026
+          },
+          "-OnS-R5gGnAiMo3rdIwy": {
+            "createdAt": 1773234406162,
+            "date": 1773234402985,
+            "entries": [
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 10000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260311-183642-2101",
+            "year": 2026
+          },
+          "-OnS0pZ2ZF9YGlGYQz7l": {
+            "createdAt": 1773234772587,
+            "date": 1773234770620,
+            "entries": [
+              {
+                "amount": 149829.36,
+                "costCenter": "",
+                "ledgerId": "bank",
+                "type": "debit"
+              },
+              {
+                "amount": 129999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 19830.36,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260311-184250-4116",
+            "year": 2026
+          },
+          "-OnS0prBaCo8TyS-OT7e": {
+            "createdAt": 1773234773812,
+            "date": 1773234770620,
+            "entries": [
+              {
+                "amount": 100000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 100000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260311-184250-4116",
+            "year": 2026
+          },
+          "-OnS2KI2Apa1eMPp-F-F": {
+            "createdAt": 1773235164664,
+            "date": 1773235162666,
+            "entries": [
+              {
+                "amount": 149829.36,
+                "costCenter": "",
+                "ledgerId": "cash",
+                "type": "debit"
+              },
+              {
+                "amount": 129999,
+                "costCenter": "",
+                "ledgerId": "sales",
+                "type": "credit"
+              },
+              {
+                "amount": 19830.36,
+                "costCenter": "",
+                "ledgerId": "gst_payable",
+                "type": "credit"
+              }
+            ],
+            "narration": "Sales Invoice BILL-20260311-184922-4714",
+            "year": 2026
+          },
+          "-OnS2Ka65FdkLeIfNCyO": {
+            "createdAt": 1773235165883,
+            "date": 1773235162666,
+            "entries": [
+              {
+                "amount": 100000,
+                "costCenter": "",
+                "ledgerId": "cogs",
+                "type": "debit"
+              },
+              {
+                "amount": 100000,
+                "costCenter": "",
+                "ledgerId": "inventory",
+                "type": "credit"
+              }
+            ],
+            "narration": "COGS Invoice BILL-20260311-184922-4714",
+            "year": 2026
+          }
+        },
+        "ledgerHistory": {
+          "bank": {
+            "-OnS-QnYIR02FvP4sNAK": {
+              "amount": 14981.9,
+              "balanceAfter": 14981.9,
+              "createdAt": 1773234404930,
+              "date": 1773234402985,
+              "journalId": "-OnS-QnYIR02FvP4sNAJ",
+              "narration": "Sales Invoice BILL-20260311-183642-2101",
+              "type": "debit"
+            },
+            "-OnS0pZ2ZF9YGlGYQz7m": {
+              "amount": 149829.36,
+              "balanceAfter": 164811.26,
+              "createdAt": 1773234772587,
+              "date": 1773234770620,
+              "journalId": "-OnS0pZ2ZF9YGlGYQz7l",
+              "narration": "Sales Invoice BILL-20260311-184250-4116",
+              "type": "debit"
+            }
+          },
+          "cash": {
+            "-OnG91ySnFQ8Ox4VRl9u": {
+              "amount": 14981.9,
+              "balanceAfter": 14981.9,
+              "createdAt": 1773035598569,
+              "date": 1773035596066,
+              "journalId": "-OnG91yRZ25Zk1xrCpeH",
+              "narration": "Sales Invoice BILL-20260309-112316-6169",
+              "type": "debit"
+            },
+            "-OnGEPj6X_4a6CqkvxGB": {
+              "amount": 14981.9,
+              "balanceAfter": 29963.8,
+              "createdAt": 1773037006510,
+              "date": 1773037003928,
+              "journalId": "-OnGEPj6X_4a6CqkvxGA",
+              "narration": "Sales Invoice BILL-20260309-114643-1171",
+              "type": "debit"
+            },
+            "-OnGG4ZjVklOdY6JoEgM": {
+              "amount": 14981.9,
+              "balanceAfter": 44945.7,
+              "createdAt": 1773037443739,
+              "date": 1773037440846,
+              "journalId": "-OnGG4ZjVklOdY6JoEgL",
+              "narration": "Sales Invoice BILL-20260309-115400-1328",
+              "type": "debit"
+            },
+            "-OnGHRUbOtsXZKh5sHQz": {
+              "amount": 14981.9,
+              "balanceAfter": 59927.6,
+              "createdAt": 1773037799752,
+              "date": 1773037797227,
+              "journalId": "-OnGHRUbOtsXZKh5sHQy",
+              "narration": "Sales Invoice BILL-20260309-115957-9001",
+              "type": "debit"
+            },
+            "-OnGJp3cpn2f8aBVrMp4": {
+              "amount": 14981.9,
+              "balanceAfter": 74909.5,
+              "createdAt": 1773038424726,
+              "date": 1773038421612,
+              "journalId": "-OnGJp3cpn2f8aBVrMp3",
+              "narration": "Sales Invoice BILL-20260309-121021-1624",
+              "type": "debit"
+            },
+            "-OnGKtKj1D7-Hw9R4E8H": {
+              "amount": 14981.9,
+              "balanceAfter": 89891.4,
+              "createdAt": 1773038704355,
+              "date": 1773038701388,
+              "journalId": "-OnGKtKj1D7-Hw9R4E8G",
+              "narration": "Sales Invoice BILL-20260309-121501-2112",
+              "type": "debit"
+            },
+            "-OnGMVTGdsRPbq_kp38i": {
+              "amount": 14981.9,
+              "balanceAfter": 104873.3,
+              "createdAt": 1773039126871,
+              "date": 1773039122942,
+              "journalId": "-OnGMVTGdsRPbq_kp38h",
+              "narration": "Sales Invoice BILL-20260309-122202-9438",
+              "type": "debit"
+            },
+            "-OnS2KI2Apa1eMPp-F-G": {
+              "amount": 149829.36,
+              "balanceAfter": 254702.66,
+              "createdAt": 1773235164664,
+              "date": 1773235162666,
+              "journalId": "-OnS2KI2Apa1eMPp-F-F",
+              "narration": "Sales Invoice BILL-20260311-184922-4714",
+              "type": "debit"
+            }
+          },
+          "cogs": {
+            "-OnG92JZeAiq3uVBt-LK": {
+              "amount": 10000,
+              "balanceAfter": 10000,
+              "createdAt": 1773035599986,
+              "date": 1773035596066,
+              "journalId": "-OnG92JZeAiq3uVBt-LJ",
+              "narration": "COGS Invoice BILL-20260309-112316-6169",
+              "type": "debit"
+            },
+            "-OnGEQC1K_-eZeQX9F4C": {
+              "amount": 10000,
+              "balanceAfter": 20000,
+              "createdAt": 1773037008421,
+              "date": 1773037003928,
+              "journalId": "-OnGEQC0voIjrQB3KFLR",
+              "narration": "COGS Invoice BILL-20260309-114643-1171",
+              "type": "debit"
+            },
+            "-OnGG4vT0lUN07b9TmWY": {
+              "amount": 10000,
+              "balanceAfter": 30000,
+              "createdAt": 1773037445192,
+              "date": 1773037440846,
+              "journalId": "-OnGG4vT0lUN07b9TmWX",
+              "narration": "COGS Invoice BILL-20260309-115400-1328",
+              "type": "debit"
+            },
+            "-OnGHRpTHnMddQdIVcnR": {
+              "amount": 10000,
+              "balanceAfter": 40000,
+              "createdAt": 1773037801150,
+              "date": 1773037797227,
+              "journalId": "-OnGHRpTHnMddQdIVcnQ",
+              "narration": "COGS Invoice BILL-20260309-115957-9001",
+              "type": "debit"
+            },
+            "-OnGJpTzX0cSoF885ID8": {
+              "amount": 10000,
+              "balanceAfter": 50000,
+              "createdAt": 1773038426411,
+              "date": 1773038421612,
+              "journalId": "-OnGJpTzX0cSoF885ID7",
+              "narration": "COGS Invoice BILL-20260309-121021-1624",
+              "type": "debit"
+            },
+            "-OnGKtfhqzXA-iEI3jnU": {
+              "amount": 10000,
+              "balanceAfter": 60000,
+              "createdAt": 1773038705790,
+              "date": 1773038701388,
+              "journalId": "-OnGKtfhqzXA-iEI3jnT",
+              "narration": "COGS Invoice BILL-20260309-121501-2112",
+              "type": "debit"
+            },
+            "-OnGMVoRv5VkDA6bobee": {
+              "amount": 10000,
+              "balanceAfter": 70000,
+              "createdAt": 1773039128291,
+              "date": 1773039122942,
+              "journalId": "-OnGMVoQZNqk-R8CbzLZ",
+              "narration": "COGS Invoice BILL-20260309-122202-9438",
+              "type": "debit"
+            },
+            "-OnS-R5gGnAiMo3rdIwz": {
+              "amount": 10000,
+              "balanceAfter": 80000,
+              "createdAt": 1773234406162,
+              "date": 1773234402985,
+              "journalId": "-OnS-R5gGnAiMo3rdIwy",
+              "narration": "COGS Invoice BILL-20260311-183642-2101",
+              "type": "debit"
+            },
+            "-OnS0prBaCo8TyS-OT7f": {
+              "amount": 100000,
+              "balanceAfter": 180000,
+              "createdAt": 1773234773812,
+              "date": 1773234770620,
+              "journalId": "-OnS0prBaCo8TyS-OT7e",
+              "narration": "COGS Invoice BILL-20260311-184250-4116",
+              "type": "debit"
+            },
+            "-OnS2Ka65FdkLeIfNCyP": {
+              "amount": 100000,
+              "balanceAfter": 280000,
+              "createdAt": 1773235165883,
+              "date": 1773235162666,
+              "journalId": "-OnS2Ka65FdkLeIfNCyO",
+              "narration": "COGS Invoice BILL-20260311-184922-4714",
+              "type": "debit"
+            }
+          },
+          "gst_payable": {
+            "-OnG91ySnFQ8Ox4VRl9w": {
+              "amount": 1982.9,
+              "balanceAfter": -1982.9,
+              "createdAt": 1773035598569,
+              "date": 1773035596066,
+              "journalId": "-OnG91yRZ25Zk1xrCpeH",
+              "narration": "Sales Invoice BILL-20260309-112316-6169",
+              "type": "credit"
+            },
+            "-OnGEPj6X_4a6CqkvxGD": {
+              "amount": 1982.9,
+              "balanceAfter": -3965.8,
+              "createdAt": 1773037006510,
+              "date": 1773037003928,
+              "journalId": "-OnGEPj6X_4a6CqkvxGA",
+              "narration": "Sales Invoice BILL-20260309-114643-1171",
+              "type": "credit"
+            },
+            "-OnGG4ZjVklOdY6JoEgO": {
+              "amount": 1982.9,
+              "balanceAfter": -5948.7,
+              "createdAt": 1773037443739,
+              "date": 1773037440846,
+              "journalId": "-OnGG4ZjVklOdY6JoEgL",
+              "narration": "Sales Invoice BILL-20260309-115400-1328",
+              "type": "credit"
+            },
+            "-OnGHRUbOtsXZKh5sHR0": {
+              "amount": 1982.9,
+              "balanceAfter": -7931.6,
+              "createdAt": 1773037799752,
+              "date": 1773037797227,
+              "journalId": "-OnGHRUbOtsXZKh5sHQy",
+              "narration": "Sales Invoice BILL-20260309-115957-9001",
+              "type": "credit"
+            },
+            "-OnGJp3cpn2f8aBVrMp6": {
+              "amount": 1982.9,
+              "balanceAfter": -9914.5,
+              "createdAt": 1773038424726,
+              "date": 1773038421612,
+              "journalId": "-OnGJp3cpn2f8aBVrMp3",
+              "narration": "Sales Invoice BILL-20260309-121021-1624",
+              "type": "credit"
+            },
+            "-OnGKtKj1D7-Hw9R4E8J": {
+              "amount": 1982.9,
+              "balanceAfter": -11897.4,
+              "createdAt": 1773038704355,
+              "date": 1773038701388,
+              "journalId": "-OnGKtKj1D7-Hw9R4E8G",
+              "narration": "Sales Invoice BILL-20260309-121501-2112",
+              "type": "credit"
+            },
+            "-OnGMVTGdsRPbq_kp38k": {
+              "amount": 1982.9,
+              "balanceAfter": -13880.3,
+              "createdAt": 1773039126871,
+              "date": 1773039122942,
+              "journalId": "-OnGMVTGdsRPbq_kp38h",
+              "narration": "Sales Invoice BILL-20260309-122202-9438",
+              "type": "credit"
+            },
+            "-OnS-QnYIR02FvP4sNAM": {
+              "amount": 1982.9,
+              "balanceAfter": -15863.2,
+              "createdAt": 1773234404930,
+              "date": 1773234402985,
+              "journalId": "-OnS-QnYIR02FvP4sNAJ",
+              "narration": "Sales Invoice BILL-20260311-183642-2101",
+              "type": "credit"
+            },
+            "-OnS0pZ2ZF9YGlGYQz7o": {
+              "amount": 19830.36,
+              "balanceAfter": -35693.56,
+              "createdAt": 1773234772587,
+              "date": 1773234770620,
+              "journalId": "-OnS0pZ2ZF9YGlGYQz7l",
+              "narration": "Sales Invoice BILL-20260311-184250-4116",
+              "type": "credit"
+            },
+            "-OnS2KI3HgPf4KNk1v9E": {
+              "amount": 19830.36,
+              "balanceAfter": -55523.92,
+              "createdAt": 1773235164664,
+              "date": 1773235162666,
+              "journalId": "-OnS2KI2Apa1eMPp-F-F",
+              "narration": "Sales Invoice BILL-20260311-184922-4714",
+              "type": "credit"
+            }
+          },
+          "inventory": {
+            "-OnG92JZeAiq3uVBt-LL": {
+              "amount": 10000,
+              "balanceAfter": -10000,
+              "createdAt": 1773035599986,
+              "date": 1773035596066,
+              "journalId": "-OnG92JZeAiq3uVBt-LJ",
+              "narration": "COGS Invoice BILL-20260309-112316-6169",
+              "type": "credit"
+            },
+            "-OnGEQC1K_-eZeQX9F4D": {
+              "amount": 10000,
+              "balanceAfter": -20000,
+              "createdAt": 1773037008421,
+              "date": 1773037003928,
+              "journalId": "-OnGEQC0voIjrQB3KFLR",
+              "narration": "COGS Invoice BILL-20260309-114643-1171",
+              "type": "credit"
+            },
+            "-OnGG4vT0lUN07b9TmWZ": {
+              "amount": 10000,
+              "balanceAfter": -30000,
+              "createdAt": 1773037445192,
+              "date": 1773037440846,
+              "journalId": "-OnGG4vT0lUN07b9TmWX",
+              "narration": "COGS Invoice BILL-20260309-115400-1328",
+              "type": "credit"
+            },
+            "-OnGHRpTHnMddQdIVcnS": {
+              "amount": 10000,
+              "balanceAfter": -40000,
+              "createdAt": 1773037801150,
+              "date": 1773037797227,
+              "journalId": "-OnGHRpTHnMddQdIVcnQ",
+              "narration": "COGS Invoice BILL-20260309-115957-9001",
+              "type": "credit"
+            },
+            "-OnGJpTzX0cSoF885ID9": {
+              "amount": 10000,
+              "balanceAfter": -50000,
+              "createdAt": 1773038426411,
+              "date": 1773038421612,
+              "journalId": "-OnGJpTzX0cSoF885ID7",
+              "narration": "COGS Invoice BILL-20260309-121021-1624",
+              "type": "credit"
+            },
+            "-OnGKtfhqzXA-iEI3jnV": {
+              "amount": 10000,
+              "balanceAfter": -60000,
+              "createdAt": 1773038705790,
+              "date": 1773038701388,
+              "journalId": "-OnGKtfhqzXA-iEI3jnT",
+              "narration": "COGS Invoice BILL-20260309-121501-2112",
+              "type": "credit"
+            },
+            "-OnGMVoRv5VkDA6bobef": {
+              "amount": 10000,
+              "balanceAfter": -70000,
+              "createdAt": 1773039128291,
+              "date": 1773039122942,
+              "journalId": "-OnGMVoQZNqk-R8CbzLZ",
+              "narration": "COGS Invoice BILL-20260309-122202-9438",
+              "type": "credit"
+            },
+            "-OnS-R5gGnAiMo3rdIx-": {
+              "amount": 10000,
+              "balanceAfter": -80000,
+              "createdAt": 1773234406162,
+              "date": 1773234402985,
+              "journalId": "-OnS-R5gGnAiMo3rdIwy",
+              "narration": "COGS Invoice BILL-20260311-183642-2101",
+              "type": "credit"
+            },
+            "-OnS0prBaCo8TyS-OT7g": {
+              "amount": 100000,
+              "balanceAfter": -180000,
+              "createdAt": 1773234773812,
+              "date": 1773234770620,
+              "journalId": "-OnS0prBaCo8TyS-OT7e",
+              "narration": "COGS Invoice BILL-20260311-184250-4116",
+              "type": "credit"
+            },
+            "-OnS2Ka65FdkLeIfNCyQ": {
+              "amount": 100000,
+              "balanceAfter": -280000,
+              "createdAt": 1773235165883,
+              "date": 1773235162666,
+              "journalId": "-OnS2Ka65FdkLeIfNCyO",
+              "narration": "COGS Invoice BILL-20260311-184922-4714",
+              "type": "credit"
+            }
+          },
+          "sales": {
+            "-OnG91ySnFQ8Ox4VRl9v": {
+              "amount": 12999,
+              "balanceAfter": -12999,
+              "createdAt": 1773035598569,
+              "date": 1773035596066,
+              "journalId": "-OnG91yRZ25Zk1xrCpeH",
+              "narration": "Sales Invoice BILL-20260309-112316-6169",
+              "type": "credit"
+            },
+            "-OnGEPj6X_4a6CqkvxGC": {
+              "amount": 12999,
+              "balanceAfter": -25998,
+              "createdAt": 1773037006510,
+              "date": 1773037003928,
+              "journalId": "-OnGEPj6X_4a6CqkvxGA",
+              "narration": "Sales Invoice BILL-20260309-114643-1171",
+              "type": "credit"
+            },
+            "-OnGG4ZjVklOdY6JoEgN": {
+              "amount": 12999,
+              "balanceAfter": -38997,
+              "createdAt": 1773037443739,
+              "date": 1773037440846,
+              "journalId": "-OnGG4ZjVklOdY6JoEgL",
+              "narration": "Sales Invoice BILL-20260309-115400-1328",
+              "type": "credit"
+            },
+            "-OnGHRUbOtsXZKh5sHR-": {
+              "amount": 12999,
+              "balanceAfter": -51996,
+              "createdAt": 1773037799752,
+              "date": 1773037797227,
+              "journalId": "-OnGHRUbOtsXZKh5sHQy",
+              "narration": "Sales Invoice BILL-20260309-115957-9001",
+              "type": "credit"
+            },
+            "-OnGJp3cpn2f8aBVrMp5": {
+              "amount": 12999,
+              "balanceAfter": -64995,
+              "createdAt": 1773038424726,
+              "date": 1773038421612,
+              "journalId": "-OnGJp3cpn2f8aBVrMp3",
+              "narration": "Sales Invoice BILL-20260309-121021-1624",
+              "type": "credit"
+            },
+            "-OnGKtKj1D7-Hw9R4E8I": {
+              "amount": 12999,
+              "balanceAfter": -77994,
+              "createdAt": 1773038704355,
+              "date": 1773038701388,
+              "journalId": "-OnGKtKj1D7-Hw9R4E8G",
+              "narration": "Sales Invoice BILL-20260309-121501-2112",
+              "type": "credit"
+            },
+            "-OnGMVTGdsRPbq_kp38j": {
+              "amount": 12999,
+              "balanceAfter": -90993,
+              "createdAt": 1773039126871,
+              "date": 1773039122942,
+              "journalId": "-OnGMVTGdsRPbq_kp38h",
+              "narration": "Sales Invoice BILL-20260309-122202-9438",
+              "type": "credit"
+            },
+            "-OnS-QnYIR02FvP4sNAL": {
+              "amount": 12999,
+              "balanceAfter": -103992,
+              "createdAt": 1773234404930,
+              "date": 1773234402985,
+              "journalId": "-OnS-QnYIR02FvP4sNAJ",
+              "narration": "Sales Invoice BILL-20260311-183642-2101",
+              "type": "credit"
+            },
+            "-OnS0pZ2ZF9YGlGYQz7n": {
+              "amount": 129999,
+              "balanceAfter": -233991,
+              "createdAt": 1773234772587,
+              "date": 1773234770620,
+              "journalId": "-OnS0pZ2ZF9YGlGYQz7l",
+              "narration": "Sales Invoice BILL-20260311-184250-4116",
+              "type": "credit"
+            },
+            "-OnS2KI3HgPf4KNk1v9D": {
+              "amount": 129999,
+              "balanceAfter": -363990,
+              "createdAt": 1773235164664,
+              "date": 1773235162666,
+              "journalId": "-OnS2KI2Apa1eMPp-F-F",
+              "narration": "Sales Invoice BILL-20260311-184922-4714",
+              "type": "credit"
+            }
+          }
+        },
+        "ledgers": {
+          "bank": {
+            "balance": 164811.26,
+            "name": "Bank",
+            "type": "asset"
+          },
+          "capital": {
+            "balance": 0,
+            "name": "Capital",
+            "type": "equity"
+          },
+          "cash": {
+            "balance": 254702.66,
+            "name": "Cash",
+            "type": "asset"
+          },
+          "cogs": {
+            "balance": 280000,
+            "name": "Cost of Goods Sold",
+            "type": "expense"
+          },
+          "gst_payable": {
+            "balance": -55523.92,
+            "name": "GST Payable",
+            "type": "liability"
+          },
+          "inventory": {
+            "balance": -280000,
+            "name": "Inventory",
+            "type": "asset"
+          },
+          "sales": {
+            "balance": -363990,
+            "name": "Sales",
+            "type": "income"
+          }
+        }
+      },
+      "attendance": {
+        "2026-03-18": {
+          "EMP001": {
+            "markedAt": 1773830808604,
+            "status": "present"
+          },
+          "EMP002": {
+            "markedAt": 1773823612736,
+            "status": "absent"
+          }
+        }
+      },
+      "bills": {
+        "-OnGKsyq_Z5EtYWK-896": {
+          "billId": "BILL-20260309-121501-2112",
+          "buyerId": "-OnGKscwSfvU1EbcXS_D",
+          "cashierId": "K5phHwjkkPQ4ighuju4XIBgp3YG3",
+          "createdAt": 1773038701388,
+          "discount": 0,
+          "gstTotal": 1982.9,
+          "items": {
+            "-OnGKjwVPjGZBAs0uJdq": {
+              "category": "Electronics",
+              "costPrice": 10000,
+              "gst": 18,
+              "id": "-OnGKjwVPjGZBAs0uJdq",
+              "imei1": "1234",
+              "imei2": "1298",
+              "mrp": 12999,
+              "name": "Smart Phones",
+              "qty": 1,
+              "scannedIMEI": "1234",
+              "stock": 1
+            }
+          },
+          "paymentMode": "cash",
+          "subtotal": 12999,
+          "totalAmount": 14981.9,
+          "totalProfit": 1016.1
+        },
+        "-OnGMV3czNvKYfZX_lOM": {
+          "billId": "BILL-20260309-122202-9438",
+          "buyerId": "-OnGKscwSfvU1EbcXS_D",
+          "cashierId": "K5phHwjkkPQ4ighuju4XIBgp3YG3",
+          "createdAt": 1773039122942,
+          "discount": 0,
+          "gstTotal": 1982.9,
+          "items": {
+            "-OnGKjwVPjGZBAs0uJdq": {
+              "category": "Electronics",
+              "costPrice": 10000,
+              "gst": 18,
+              "id": "-OnGKjwVPjGZBAs0uJdq",
+              "imei1": "12349",
+              "imei2": "12989",
+              "mrp": 12999,
+              "name": "Smart Phones",
+              "qty": 1,
+              "scannedIMEI": "12349",
+              "stock": 1
+            }
+          },
+          "paymentMode": "cash",
+          "subtotal": 12999,
+          "totalAmount": 14981.9,
+          "totalProfit": 1016.1
+        },
+        "-OnS-Q_5VcNRYpR4uVaH": {
+          "billId": "BILL-20260311-183642-2101",
+          "buyerId": "-OnGKscwSfvU1EbcXS_D",
+          "cashierId": "K5phHwjkkPQ4ighuju4XIBgp3YG3",
+          "createdAt": 1773234402985,
+          "discount": 0,
+          "gstTotal": 1982.9,
+          "items": {
+            "-OnGKjwVPjGZBAs0uJdq": {
+              "category": "Electronics",
+              "costPrice": 10000,
+              "gst": 18,
+              "id": "-OnGKjwVPjGZBAs0uJdq",
+              "imei1": "12348",
+              "imei2": "12988",
+              "mrp": 12999,
+              "name": "Smart Phones",
+              "qty": 1,
+              "scannedIMEI": "12988",
+              "stock": 1
+            }
+          },
+          "paymentMode": "upi",
+          "subtotal": 12999,
+          "totalAmount": 14981.9,
+          "totalProfit": 1016.1
+        },
+        "-OnS0pKlH7wxxwQ1d74X": {
+          "billId": "BILL-20260311-184250-4116",
+          "buyerId": "-OnGKscwSfvU1EbcXS_D",
+          "cashierId": "K5phHwjkkPQ4ighuju4XIBgp3YG3",
+          "createdAt": 1773234770620,
+          "discount": 0,
+          "gstTotal": 19830.36,
+          "items": {
+            "-OnGKjwVPjGZBAs0uJdq": {
+              "category": "Electronics",
+              "costPrice": 100000,
+              "gst": 18,
+              "id": "-OnGKjwVPjGZBAs0uJdq",
+              "imei1": "123489",
+              "imei2": "129889",
+              "mrp": 129999,
+              "name": "Smart Phones",
+              "qty": 1,
+              "scannedIMEI": "129889",
+              "stock": 1
+            }
+          },
+          "paymentMode": "upi",
+          "subtotal": 129999,
+          "totalAmount": 149829.36,
+          "totalProfit": 10168.64
+        },
+        "-OnS2K3ZUpBwVVeySmmd": {
+          "billId": "BILL-20260311-184922-4714",
+          "buyerId": "-OnGKscwSfvU1EbcXS_D",
+          "cashierId": "K5phHwjkkPQ4ighuju4XIBgp3YG3",
+          "createdAt": 1773235162666,
+          "discount": 0,
+          "gstTotal": 19830.36,
+          "items": {
+            "-OnGKjwVPjGZBAs0uJdq": {
+              "category": "Electronics",
+              "costPrice": 100000,
+              "gst": 18,
+              "id": "-OnGKjwVPjGZBAs0uJdq",
+              "imei1": "1234891",
+              "imei2": "1298891",
+              "mrp": 129999,
+              "name": "Smart Phones",
+              "qty": 1,
+              "scannedIMEI": "1234891",
+              "stock": 1
+            }
+          },
+          "paymentMode": "cash",
+          "subtotal": 129999,
+          "totalAmount": 149829.36,
+          "totalProfit": 10168.64
+        }
+      },
+      "buyers": {
+        "-OnGKscwSfvU1EbcXS_D": {
+          "createdAt": 1773038701039,
+          "name": "srijan singh",
+          "phone": "6394902020"
+        }
+      },
+      "employees": {
+        "EMP001": {
+          "active": true,
+          "createdAt": 1773423433918,
+          "id": "EMP001",
+          "lastLoginAt": 1773813877619,
+          "name": "shrijan singh",
+          "online": true,
+          "password": 200409,
+          "phone": "8398908209",
+          "role": "cashier",
+          "salary": 12000,
+          "username": "sr2004@virevo.in"
+        },
+        "EMP002": {
+          "active": true,
+          "createdAt": 1773522922016,
+          "id": "EMP002",
+          "lastLoginAt": 1773809858845,
+          "name": "manager",
+          "online": true,
+          "password": 390093,
+          "phone": "8798709898",
+          "role": "manager",
+          "salary": 15000,
+          "username": "manager@virevo.in"
+        }
+      },
+      "imeiIndex": {
+        "1234": "-OnGKjwVPjGZBAs0uJdq",
+        "1298": "-OnGKjwVPjGZBAs0uJdq",
+        "12348": "-OnGKjwVPjGZBAs0uJdq",
+        "12349": "-OnGKjwVPjGZBAs0uJdq",
+        "12988": "-OnGKjwVPjGZBAs0uJdq",
+        "12989": "-OnGKjwVPjGZBAs0uJdq",
+        "123489": "-OnGKjwVPjGZBAs0uJdq",
+        "129889": "-OnGKjwVPjGZBAs0uJdq",
+        "1234891": "-OnGKjwVPjGZBAs0uJdq",
+        "1298891": "-OnGKjwVPjGZBAs0uJdq"
+      },
+      "info": {
+        "settings": {
+          "address": "near Tahasil Lalganj Azamgarh",
+          "city": "Azamgarh",
+          "companyName": "Virevo",
+          "estimatePrefix": "EST-2004",
+          "gstin": "UWFN75092809532798",
+          "invoicePrefix": "INV",
+          "phone": "06394902020",
+          "pincode": "276202",
+          "updatedAt": 1773036725027,
+          "upiId": "shakshamshakshamsingh-2@okhdfcbank"
+        }
+      },
+      "logs": {
+        "-OnG9231AXNtKBl2CikF": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773035598553,
+          "details": "Journal -OnG91yRZ25Zk1xrCpeH created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnG92P89ce0Kf_-i3ZR": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773035599968,
+          "details": "Journal -OnG92JZeAiq3uVBt-LJ created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGEPo_WiEDbCdQsawU": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773037006454,
+          "details": "Journal -OnGEPj6X_4a6CqkvxGA created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGEQH-nloAPr3-3iA2": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773037008337,
+          "details": "Journal -OnGEQC0voIjrQB3KFLR created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGG4eT6Bpnx_sH2ugN": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773037443683,
+          "details": "Journal -OnGG4ZjVklOdY6JoEgL created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGG509DKL-9WOkWYbo": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773037445135,
+          "details": "Journal -OnGG4vT0lUN07b9TmWX created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGHR_6E5LeJ8y_oEXk": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773037799676,
+          "details": "Journal -OnGHRUbOtsXZKh5sHQy created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGHRux70rzNoP0vNBq": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773037801074,
+          "details": "Journal -OnGHRpTHnMddQdIVcnQ created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGJp98-C35xbU8khE9": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773038424636,
+          "details": "Journal -OnGJp3cpn2f8aBVrMp3 created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGJpZTmN6FQ0G2B3Y_": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773038426321,
+          "details": "Journal -OnGJpTzX0cSoF885ID7 created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGKtQGaypSrQN-5hVJ": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773038704260,
+          "details": "Journal -OnGKtKj1D7-Hw9R4E8G created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGKtlgP6jE2Dhijecm": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773038705695,
+          "details": "Journal -OnGKtfhqzXA-iEI3jnT created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGMVYq4Q8lflryEBEW": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773039126765,
+          "details": "Journal -OnGMVTGdsRPbq_kp38h created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnGMVu0m0hGsEUVUgKo": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773039128184,
+          "details": "Journal -OnGMVoQZNqk-R8CbzLZ created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnS-QsN4b3xxp6DGKbT": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773234405140,
+          "details": "Journal -OnS-QnYIR02FvP4sNAJ created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnS-RAvqUEQ_2wAaLGR": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773234406391,
+          "details": "Journal -OnS-R5gGnAiMo3rdIwy created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnS0pcrwOMMZhG1ZyoF": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773234772787,
+          "details": "Journal -OnS0pZ2ZF9YGlGYQz7l created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnS0pw-wBL3VInMumJx": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773234774012,
+          "details": "Journal -OnS0prBaCo8TyS-OT7e created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnS2KMrRy9pxW8hhMAr": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773235164852,
+          "details": "Journal -OnS2KI2Apa1eMPp-F-F created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        },
+        "-OnS2KetJ9K9s3xReKfM": {
+          "action": "CREATE_JOURNAL",
+          "createdAt": 1773235166070,
+          "details": "Journal -OnS2Ka65FdkLeIfNCyO created",
+          "device": "desktop",
+          "module": "accounting",
+          "severity": "info",
+          "userId": "system"
+        }
+      },
+      "products": {
+        "-OnGKjwVPjGZBAs0uJdq": {
+          "category": "Electronics",
+          "costPrice": 100000,
+          "gst": 18,
+          "imei1": "1234891",
+          "imei2": "1298891",
+          "mrp": 129999,
+          "name": "Smart Phones",
+          "soldIMEIs": {
+            "1234891": {
+              "billId": "BILL-20260311-184922-4714",
+              "soldAt": 1773235162666
+            }
+          },
+          "stock": 0
+        }
+      }
+    }
+  },
+  "users": {
+    "K5phHwjkkPQ4ighuju4XIBgp3YG3": {
+      "active": true,
+      "createdAt": 1772468113549,
+      "email": "srijan2004.4apr@gmail.com",
+      "lastLoginAt": 1773896028795,
+      "lastLogoutAt": 1773823626840,
+      "name": "Atul Singh",
+      "online": true,
+      "plan": "PRO",
+      "planExpiry": "2026-04-02T16:18:09.111Z",
+      "role": "admin",
+      "shopId": "shop_1772468112457"
+    },
+    "NQyKI8bWPkb2HwYeqg5LJKT5Cfz2": {
+      "active": true,
+      "email": "shakshamshakshamsingh@gmail.com",
+      "lastLoginAt": 1773234212221,
+      "lastLogoutAt": 1773234265279,
+      "name": "Srijan singh",
+      "online": true,
+      "role": "superadmin",
+      "username": "srijan09"
+    }
+  }
+}

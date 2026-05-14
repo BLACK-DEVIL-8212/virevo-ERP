@@ -1,0 +1,295 @@
+.billing-page {
+  background: #0b1220;
+  min-height: 100vh;
+  padding: 20px;
+  color: #e5e7eb;
+}
+
+.billing-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+.billing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .shop-info {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+}
+
+/* ================= SHOP SELECT ================= */
+.shop-selector-wrapper {
+  margin-bottom: 15px;
+
+  label {
+    margin-right: 10px;
+  }
+
+  .shop-selector {
+    padding: 8px;
+    border-radius: 8px;
+    background: #020617;
+    color: #fff;
+    border: 1px solid #1e293b;
+  }
+}
+
+/* ================= SCAN ================= */
+.scan-section {
+  margin-bottom: 20px;
+
+  .scan-form {
+    display: flex;
+    gap: 10px;
+
+    input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      background: #020617;
+      color: #fff;
+    }
+
+    button {
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ================= MESSAGES ================= */
+.error-message {
+  background: #ef4444;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.success-message {
+  background: #22c55e;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ================= PREVIEW ================= */
+.preview-card {
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  .preview-actions {
+    display: flex;
+    gap: 10px;
+
+    .btn-add {
+      background: #22c55e;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-cancel {
+      background: #ef4444;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ================= BILL TABLE ================= */
+.bill-section {
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+
+  .bill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .btn-clear {
+      background: #ef4444;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background: #1e293b;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #1e293b;
+    }
+  }
+}
+
+/* ================= CUSTOMER ================= */
+.customer-section {
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+
+  .customer-form {
+    display: flex;
+    gap: 20px;
+
+    .form-group {
+      flex: 1;
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        background: #0b1220;
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+}
+
+/* ================= PAYMENT ================= */
+.payment-section {
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+
+  .discount-section {
+    margin-bottom: 15px;
+
+    .discount-input {
+      display: flex;
+      gap: 10px;
+
+      input, select {
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        background: #0b1220;
+        color: #fff;
+      }
+    }
+  }
+
+  .totals {
+    margin-bottom: 15px;
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+
+      &.grand-total {
+        font-weight: 700;
+        font-size: 18px;
+        color: #22c55e;
+      }
+
+      &.discount {
+        color: #ef4444;
+      }
+    }
+  }
+
+  .payment-actions {
+    display: flex;
+    gap: 10px;
+
+    .payment-mode {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      background: #0b1220;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-pay {
+      flex: 2;
+      padding: 12px;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ================= MODAL ================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+
+  .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    .btn-confirm {
+      background: #22c55e;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .btn-cancel {
+      background: #ef4444;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  }
+}

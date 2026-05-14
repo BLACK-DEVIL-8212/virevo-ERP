@@ -1,0 +1,676 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    /* ================= EMPLOYEE INDEX (Public read for login) ================= */
+    "employeeIndex": {
+      ".read": true,
+      ".write": "auth != null",
+      "$key": {
+        ".validate": "newData.hasChildren(['shopId','employeeId'])"
+      }
+    },
+    
+    "employeeIndexHash": {
+      ".read": true,
+      ".write": "auth != null",
+      "$key": {
+        ".validate": "newData.hasChildren(['shopId','employeeId'])"
+      }
+    },
+
+    /* ================= USERS ================= */
+    "users": {
+      ".indexOn": ["email", "shopId", "role"],
+      
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || root.child('users/'+auth.uid+'/role').val() === 'superadmin' || root.child('users/'+auth.uid+'/role').val() === 'admin')",
+        ".write": "auth != null && (auth.uid === $uid || root.child('users/'+auth.uid+'/role').val() === 'superadmin')",
+        
+        "role": {
+          ".validate": "newData.isString() && (newData.val() === 'superadmin' || newData.val() === 'admin' || newData.val() === 'manager' || newData.val() === 'cashier' || newData.val() === 'staff' || newData.val() === 'employee')"
+        },
+        
+        "shopId": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        
+        "email": {
+          ".validate": "newData.isString() && newData.val().matches(/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/)"
+        },
+        
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        
+        "plan": {
+          ".validate": "newData.isString()"
+        },
+        
+        "planExpiry": {
+          ".validate": "newData.isString()"
+        },
+        
+        "planAmount": {
+          ".validate": "newData.isNumber()"
+        },
+        
+        "gstAmount": {
+          ".validate": "newData.isNumber()"
+        },
+        
+        "active": {
+          ".validate": "newData.isBoolean()"
+        },
+        
+        "online": {
+          ".validate": "newData.isBoolean()"
+        },
+        
+        "emailVerified": {
+          ".validate": "newData.isBoolean()"
+        },
+        
+        "phone": {
+          ".validate": "newData.isString()"
+        },
+        
+        "createdAt": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        },
+        
+        "lastLoginAt": {
+          ".validate": "newData.isNumber()"
+        },
+        
+        "lastLoginIP": {
+          ".validate": "newData.isString()"
+        },
+        
+        "lastLoginUserAgent": {
+          ".validate": "newData.isString()"
+        },
+        
+        "lastLogoutAt": {
+          ".validate": "newData.isNumber()"
+        },
+        
+        "loginCount": {
+          ".validate": "newData.isNumber()"
+        },
+        
+        "$other": {
+          ".validate": true
+        }
+      }
+    },
+
+    /* ================= SHOPS ================= */
+    "shops": {
+      ".indexOn": ["companyName"],
+      
+      "$shopId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (!data.exists() || root.child('users/'+auth.uid+'/role').val() === 'superadmin' || (root.child('users/'+auth.uid+'/shopId').val() === $shopId && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'manager')))",
+
+        /* ================= SHOP INFO ================= */
+        "info": {
+          ".read": "auth != null",
+          ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'superadmin' || (root.child('users/'+auth.uid+'/role').val() === 'admin' && root.child('users/'+auth.uid+'/shopId').val() === $shopId))",
+          
+          "companyName": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          
+          "createdAt": {
+            ".validate": "newData.isNumber()"
+          },
+          
+          "phone": {
+            ".validate": "newData.isString()"
+          },
+          
+          "address": {
+            ".validate": "newData.isString()"
+          },
+          
+          "gstNumber": {
+            ".validate": "newData.isString()"
+          },
+          
+          "status": {
+            ".validate": "newData.val() === 'active' || newData.val() === 'inactive' || newData.val() === 'suspended'"
+          },
+          
+          "$other": {
+            ".validate": true
+          }
+        },
+
+        /* ================= SHOP SETTINGS ================= */
+        "settings": {
+          ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'superadmin') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          
+          "currency": {
+            ".validate": "newData.isString()"
+          },
+          
+          "timezone": {
+            ".validate": "newData.isString()"
+          },
+          
+          "invoicePrefix": {
+            ".validate": "newData.isString()"
+          },
+          
+          "lowStockAlert": {
+            ".validate": "newData.isNumber()"
+          },
+          
+          "$other": {
+            ".validate": true
+          }
+        },
+
+        /* ================= EMPLOYEES ================= */
+        "employees": {
+          ".indexOn": ["role", "active", "username", "name"],
+
+          "$employeeId": {
+            ".read": true,
+            ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'superadmin' || (root.child('users/'+auth.uid+'/role').val() === 'admin' && root.child('users/'+auth.uid+'/shopId').val() === $shopId) || (root.child('users/'+auth.uid+'/role').val() === 'manager' && root.child('users/'+auth.uid+'/shopId').val() === $shopId))",
+
+            "name": {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            
+            "username": {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            
+            "password": {
+              ".validate": "newData.isString() && newData.val().length >= 20"
+            },
+            
+            "role": {
+              ".validate": "newData.val() === 'manager' || newData.val() === 'cashier' || newData.val() === 'employee' || newData.val() === 'supervisor'"
+            },
+            
+            "salary": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            
+            "active": {
+              ".validate": "newData.isBoolean()"
+            },
+            
+            "terminated": {
+              ".validate": "newData.isBoolean()"
+            },
+            
+            "online": {
+              ".validate": "newData.isBoolean()"
+            },
+            
+            "phone": {
+              ".validate": "newData.isString() && newData.val().matches(/^[0-9]{10}$/)"
+            },
+            
+            "email": {
+              ".validate": "newData.isString()"
+            },
+            
+            "permissions": {
+              ".validate": "newData.hasChildren(['viewDashboard','createBill','editBill','cancelBill','viewReports','manageProducts','manageCustomers','manageStaff'])"
+            },
+            
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            },
+            
+            "updatedAt": {
+              ".validate": "newData.isNumber()"
+            },
+            
+            "lastLoginAt": {
+              ".validate": "newData.isNumber() || newData.val() === null"
+            },
+            
+            "lastLoginIP": {
+              ".validate": "newData.isString()"
+            },
+            
+            "lastLoginUserAgent": {
+              ".validate": "newData.isString()"
+            },
+            
+            "lastLogoutAt": {
+              ".validate": "newData.isNumber() || newData.val() === null"
+            },
+            
+            "loginCount": {
+              ".validate": "newData.isNumber()"
+            },
+            
+            "$other": {
+              ".validate": true
+            }
+          }
+        },
+
+        /* ================= FAILED LOGINS ================= */
+        "failedLogins": {
+          ".read": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'superadmin' || root.child('users/'+auth.uid+'/shopId').val() === $shopId)",
+          ".write": true,
+          
+          "$employeeId": {
+            "$index": {
+              "timestamp": {
+                ".validate": "newData.isNumber()"
+              },
+              "username": {
+                ".validate": "newData.isString()"
+              },
+              "ipAddress": {
+                ".validate": "newData.isString()"
+              },
+              "userAgent": {
+                ".validate": "newData.isString()"
+              }
+            }
+          }
+        },
+
+        /* ================= NOTIFICATIONS ================= */
+        "notifications": {
+          ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'superadmin') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          
+          "$notificationId": {
+            "title": {
+              ".validate": "newData.isString()"
+            },
+            "message": {
+              ".validate": "newData.isString()"
+            },
+            "type": {
+              ".validate": "newData.val() === 'success' || newData.val() === 'error' || newData.val() === 'warning' || newData.val() === 'info'"
+            },
+            "read": {
+              ".validate": "newData.isBoolean()"
+            },
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            }
+          }
+        },
+
+        /* ================= PRODUCTS ================= */
+        "products": {
+          ".indexOn": ["category", "name", "stock"],
+          
+          "$productId": {
+            ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'superadmin' || root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'manager') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            
+            "name": {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "category": {
+              ".validate": "newData.isString()"
+            },
+            "mrp": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "costPrice": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "gst": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+            },
+            "stock": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "imei1": {
+              ".validate": "newData.isString()"
+            },
+            "imei2": {
+              ".validate": "newData.isString()"
+            },
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "updatedAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "lastSoldAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "soldIMEIs": {
+              ".validate": true
+            },
+            "$other": {
+              ".validate": true
+            }
+          }
+        },
+
+        /* ================= IMEI INDEX ================= */
+        "imeiIndex": {
+          ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'manager' || root.child('users/'+auth.uid+'/role').val() === 'superadmin')",
+          
+          "$imei": {
+            ".validate": "newData.isString()"
+          }
+        },
+
+        /* ================= BILLS ================= */
+        "bills": {
+          ".indexOn": ["createdAt", "buyerId", "paymentMode", "billId"],
+          
+          "$billId": {
+            ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'superadmin' || root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'cashier') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            
+            "billId": {
+              ".validate": "newData.isString()"
+            },
+            "buyerId": {
+              ".validate": "newData.isString()"
+            },
+            "cashierId": {
+              ".validate": "newData.isString()"
+            },
+            "paymentMode": {
+              ".validate": "newData.val() === 'cash' || newData.val() === 'upi' || newData.val() === 'card'"
+            },
+            "subtotal": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "gstTotal": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "discount": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "totalAmount": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "totalProfit": {
+              ".validate": "newData.isNumber()"
+            },
+            "paymentStatus": {
+              ".validate": "newData.val() === 'Success' || newData.val() === 'Pending' || newData.val() === 'Failed'"
+            },
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "items": {
+              ".validate": true
+            },
+            "$other": {
+              ".validate": true
+            }
+          }
+        },
+
+        /* ================= BUYERS ================= */
+        "buyers": {
+          ".indexOn": ["phone", "name", "createdAt"],
+          
+          "$buyerId": {
+            ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'cashier' || root.child('users/'+auth.uid+'/role').val() === 'superadmin') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            
+            "name": {
+              ".validate": "newData.isString()"
+            },
+            "phone": {
+              ".validate": "newData.isString() && newData.val().matches(/^[0-9]{10}$/)"
+            },
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "$other": {
+              ".validate": true
+            }
+          }
+        },
+
+        /* ================= ACCOUNTING ================= */
+        "accounting": {
+          ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'superadmin') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+          
+          "ledgers": {
+            ".indexOn": ["type", "name"],
+            
+            "$ledgerId": {
+              ".read": true,
+              ".write": true,
+              
+              "name": {
+                ".validate": "newData.isString() && newData.val().length > 0"
+              },
+              "type": {
+                ".validate": "newData.val() === 'asset' || newData.val() === 'liability' || newData.val() === 'income' || newData.val() === 'expense' || newData.val() === 'equity'"
+              },
+              "balance": {
+                ".validate": "newData.isNumber()"
+              },
+              "createdAt": {
+                ".validate": "newData.isNumber()"
+              },
+              "updatedAt": {
+                ".validate": "newData.isNumber()"
+              }
+            }
+          },
+          
+          "journals": {
+            ".indexOn": ["date", "reference"],
+            
+            "$journalId": {
+              "reference": {
+                ".validate": "newData.isString()"
+              },
+              "date": {
+                ".validate": "newData.isNumber()"
+              },
+              "narration": {
+                ".validate": "newData.isString()"
+              },
+              "entries": {
+                ".validate": true
+              }
+            }
+          }
+        },
+
+        /* ================= ATTENDANCE ================= */
+        "attendance": {
+          ".indexOn": ["date"],
+
+          /* ✅ FIX: allow read for authenticated users OR fallback */
+          ".read": "auth != null",
+
+          /* ✅ STRICT WRITE CONTROL */
+          ".write": "auth != null && (
+            root.child('users/'+auth.uid+'/role').val() === 'superadmin' ||
+            (
+              root.child('users/'+auth.uid+'/shopId').val() === $shopId &&
+              (
+                root.child('users/'+auth.uid+'/role').val() === 'admin' ||
+                root.child('users/'+auth.uid+'/role').val() === 'manager'
+              )
+            )
+          )",
+
+          "$date": {
+            "$employeeId": {
+
+              "status": {
+                ".validate": "newData.val() === 'present' || newData.val() === 'absent' || newData.val() === 'medical' || newData.val() === 'leave'"
+              },
+
+              "markedAt": {
+                ".validate": "newData.isNumber()"
+              },
+
+              "markedBy": {
+                ".validate": "newData.isString()"
+              },
+
+              "markedByName": {
+                ".validate": "newData.isString()"
+              },
+
+              "auto": {
+                ".validate": "newData.isBoolean()"
+              },
+
+              "ipAddress": {
+                ".validate": "newData.isString()"
+              },
+
+              "userAgent": {
+                ".validate": "newData.isString()"
+              }
+            }
+          }
+        },
+
+        /* ================= SALARY PAYMENTS ================= */
+        "salaryPayments": {
+          ".indexOn": ["employeeId", "month", "paidAt"],
+          
+          "$paymentId": {
+            ".read": "auth != null && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            ".write": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'admin' || root.child('users/'+auth.uid+'/role').val() === 'superadmin') && root.child('users/'+auth.uid+'/shopId').val() === $shopId",
+            
+            "employeeId": {
+              ".validate": "newData.isString()"
+            },
+            "amount": {
+              ".validate": "newData.isNumber() && newData.val() > 0"
+            },
+            "month": {
+              ".validate": "newData.isString() && newData.val().matches(/^[0-9]{4}-[0-9]{2}$/)"
+            },
+            "paidAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "paidBy": {
+              ".validate": "newData.isString()"
+            },
+            "paymentMode": {
+              ".validate": "newData.val() === 'cash' || newData.val() === 'bank' || newData.val() === 'upi'"
+            },
+            "transactionId": {
+              ".validate": "newData.isString()"
+            }
+          }
+        },
+
+        /* ================= AUDIT LOGS ================= */
+        "auditLogs": {
+          ".indexOn": ["createdAt", "userId", "action"],
+          ".read": "auth != null && (root.child('users/'+auth.uid+'/role').val() === 'superadmin' || root.child('users/'+auth.uid+'/role').val() === 'admin')",
+          ".write": "auth != null",
+          
+          "$logId": {
+            "userId": {
+              ".validate": "newData.isString()"
+            },
+            "userName": {
+              ".validate": "newData.isString()"
+            },
+            "userRole": {
+              ".validate": "newData.isString()"
+            },
+            "action": {
+              ".validate": "newData.isString()"
+            },
+            "createdAt": {
+              ".validate": "newData.isNumber()"
+            },
+            "ipAddress": {
+              ".validate": "newData.isString()"
+            },
+            "userAgent": {
+              ".validate": "newData.isString()"
+            },
+            "metadata": {
+              ".validate": true
+            }
+          }
+        }
+      }
+    },
+
+    /* ================= SUBSCRIPTIONS ================= */
+    "subscriptions": {
+      ".indexOn": ["shopId", "status"],
+      ".read": "auth != null && root.child('users/'+auth.uid+'/role').val() === 'superadmin'",
+      ".write": "auth != null && root.child('users/'+auth.uid+'/role').val() === 'superadmin'",
+      
+      "$subId": {
+        "planId": {
+          ".validate": "newData.isString()"
+        },
+        "planName": {
+          ".validate": "newData.isString()"
+        },
+        "shopId": {
+          ".validate": "newData.isString()"
+        },
+        "shopName": {
+          ".validate": "newData.isString()"
+        },
+        "startDate": {
+          ".validate": "newData.isNumber()"
+        },
+        "endDate": {
+          ".validate": "newData.isNumber()"
+        },
+        "status": {
+          ".validate": "newData.val() === 'active' || newData.val() === 'expired' || newData.val() === 'cancelled' || newData.val() === 'pending'"
+        },
+        "amount": {
+          ".validate": "newData.isNumber() && newData.val() >= 0"
+        },
+        "gstAmount": {
+          ".validate": "newData.isNumber()"
+        },
+        "totalAmount": {
+          ".validate": "newData.isNumber()"
+        },
+        "paymentId": {
+          ".validate": "newData.isString()"
+        },
+        "paymentStatus": {
+          ".validate": "newData.val() === 'paid' || newData.val() === 'pending' || newData.val() === 'failed'"
+        },
+        "createdAt": {
+          ".validate": "newData.isNumber()"
+        },
+        "updatedAt": {
+          ".validate": "newData.isNumber()"
+        }
+      }
+    },
+
+    /* ================= SYSTEM SETTINGS ================= */
+    "systemSettings": {
+      ".read": "auth != null && root.child('users/'+auth.uid+'/role').val() === 'superadmin'",
+      ".write": "auth != null && root.child('users/'+auth.uid+'/role').val() === 'superadmin'",
+      
+      "$setting": {
+        ".validate": true
+      }
+    }
+  }
+}

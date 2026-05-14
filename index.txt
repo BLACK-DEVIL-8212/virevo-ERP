@@ -1,0 +1,40 @@
+Hardcoded superadmin role checks found across multiple files (App, Navbar, ProtectedRoute, SubscriptionGuard, Dashboard, etc.) — not scalable or secure
+Role-based access is implemented using direct string comparison ("superadmin") instead of centralized auth/permissions system
+Payment logic missing verification/confirmation checks in Billing, Dashboard, Payment, and service files — critical risk
+No proper payment success/failure validation flow (likely trusting frontend response)
+Payment-related code appears in non-payment files (Dashboard, Settings, Home) — poor separation of concerns
+Register/SignUp flow lacks proper validation (SignUp.jsx, Dashboard.jsx) — risk of bad data input
+No consistent form validation layer (frontend or backend) for user registration
+Multiple console.log statements left in production code (Attendance, Payment, auth.service, etc.)
+Presence of debug-style logs in services (auth, employee, firebase, settings) — security and performance concern
+Superadmin references inside SCSS/CSS files — indicates logic leakage into styling layer
+CSS files contain unexpected logic keywords (like superadmin/payment) — improper structuring
+Inline CSS misuse detected in some UI components (bad practice for maintainability)
+No clear admin vs user role abstraction, everything tied to superadmin checks
+Protected routes rely on weak role checks, not token/permission validation
+Subscription/payment guard logic duplicated instead of reusable middleware/service
+Payment service files lack secure API validation hooks (e.g., signature verification)
+Auth service contains hardcoded role logic, reducing flexibility for scaling roles
+No evidence of error handling in payment flows (try/catch or fallback UI missing)
+Billing logic mixed with UI layer instead of isolated service/controller
+Inconsistent file responsibilities (services handling UI concerns and vice versa)
+Employee and shop services contain debug logs, indicating unfinished production cleanup
+Settings service mixes payment logic, violating single responsibility principle
+Subscription service lacks validation safeguards before granting access
+Login flow references payment logic, which should not be coupled
+No visible rate limiting / abuse protection in auth/register flows
+No centralized constants/enums for roles (admin, superadmin) — repeated strings everywhere
+Potential security issue: frontend-driven authorization instead of backend enforcement
+Profit calculator utility contains console logs, indicating unfinished/debug code
+SCSS files referencing business logic keywords — separation of concerns violated
+No structured error messaging or validation feedback for users in forms
+Possible missing loading/error states in payment UI
+No clear audit/logging system for admin actions
+Admin functionality seems spread across many pages instead of centralized dashboard/service
+Hardcoded logic reduces maintainability and scalability (adding new roles will break things)
+No environment-based logging control (console logs should be disabled in production)
+Payment flow likely missing backend webhook handling (e.g., Razorpay/Stripe confirmation)
+Auth + payment + subscription tightly coupled, making debugging difficult
+Code duplication across pages (Dashboard, Billing, Payment)
+Improper layering (UI ↔ services ↔ auth all mixed)
+Overall architecture shows lack of modular separation (auth, billing, admin, UI)

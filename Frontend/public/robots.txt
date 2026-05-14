@@ -1,0 +1,22 @@
+# robots.txt for virevomart.gt.tc
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://virevomart.gt.tc/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bingbot specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

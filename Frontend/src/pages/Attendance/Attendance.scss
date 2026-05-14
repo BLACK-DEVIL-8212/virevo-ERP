@@ -1,0 +1,399 @@
+.attendance-page {
+
+  padding: 30px;
+
+  h2 {
+    color: #f8fafc;
+    margin-bottom: 20px;
+  }
+
+  .controls {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    input[type="date"] {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      background: #020617;
+      color: #fff;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .bulk-present-btn {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  /* =========================
+     STATISTICS CARDS
+  ========================= */
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+
+    .stat-card {
+      background: rgba(11, 18, 32, 0.85);
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      h4 {
+        color: #94a3b8;
+        font-size: 13px;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+      }
+
+      .stat-number {
+        color: #f8fafc;
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      &.present .stat-number {
+        color: #22c55e;
+      }
+
+      &.absent .stat-number {
+        color: #ef4444;
+      }
+
+      &.leave .stat-number {
+        color: #f59e0b;
+      }
+
+      &.rate .stat-number {
+        color: #3b82f6;
+      }
+    }
+  }
+
+  /* =========================
+     TABLE
+  ========================= */
+
+  .attendance-table {
+
+    background: rgba(11, 18, 32, 0.85);
+    border-radius: 18px;
+    border: 1px solid #1e293b;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 800px;
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: left;
+    }
+
+    th {
+      background: #020617;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    td {
+      color: #e5e7eb;
+      border-top: 1px solid #1e293b;
+    }
+
+    tbody tr {
+      transition: background 0.2s;
+
+      &:hover {
+        background: rgba(2, 6, 23, 0.5);
+      }
+
+      &.inactive {
+        opacity: 0.5;
+      }
+    }
+
+    .no-data {
+      text-align: center;
+      padding: 40px;
+      color: #94a3b8;
+    }
+  }
+
+  /* =========================
+     STATUS BADGES
+  ========================= */
+
+  .status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .status-badge.present {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+  }
+
+  .status-badge.absent {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+  }
+
+  .status-badge.leave {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+  }
+
+  .status-badge.medical {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+  }
+
+  /* =========================
+     ROLE BADGES
+  ========================= */
+
+  .role-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .role-badge.admin,
+  .role-badge.superadmin {
+    background: rgba(139, 92, 246, 0.2);
+    color: #a78bfa;
+  }
+
+  .role-badge.manager {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+  }
+
+  .role-badge.cashier {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+  }
+
+  .role-badge.employee {
+    background: rgba(100, 116, 139, 0.2);
+    color: #94a3b8;
+  }
+
+  /* =========================
+     BUTTONS
+  ========================= */
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+  }
+
+  button.present {
+    background: #22c55e;
+    color: #022c22;
+  }
+
+  button.absent {
+    background: #ef4444;
+    color: #fff;
+  }
+
+  button.leave {
+    background: #f59e0b;
+    color: #fff;
+  }
+
+  button.medical {
+    background: #3b82f6;
+    color: #fff;
+  }
+
+  button:hover {
+    opacity: 0.85;
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* =========================
+     MARKED BY
+  ========================= */
+
+  .marked-by {
+    font-size: 11px;
+    color: #94a3b8;
+  }
+
+  /* =========================
+     BADGE
+  ========================= */
+
+  .badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+
+    &.inactive {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+    }
+  }
+
+  /* =========================
+     LOADING & OVERLAY
+  ========================= */
+
+  .loading {
+    text-align: center;
+    padding: 40px;
+    color: #94a3b8;
+  }
+
+  .updating-overlay {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #020617;
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .attendance-page {
+    padding: 16px;
+
+    .stats-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+
+      .stat-card {
+        padding: 12px;
+
+        .stat-number {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .attendance-table {
+      font-size: 12px;
+
+      th, td {
+        padding: 10px;
+      }
+    }
+
+    .actions {
+      flex-direction: column;
+      gap: 5px;
+
+      button {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+    }
+
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+
+      .bulk-present-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .attendance-page {
+    .stats-container {
+      grid-template-columns: 1fr;
+    }
+
+    .attendance-table {
+      th, td {
+        padding: 8px;
+        font-size: 11px;
+      }
+    }
+  }
+}
